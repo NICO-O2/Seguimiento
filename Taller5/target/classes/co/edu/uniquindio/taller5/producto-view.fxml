@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.taller5.ViewController.ProductoController"
+            prefHeight="400.0" prefWidth="480.0">
+
+    <children>
+        <Label layoutX="20" layoutY="20" text="Producto:"/>
+        <TextField fx:id="txtProducto" layoutX="120" layoutY="20"/>
+
+        <Label layoutX="20" layoutY="60" text="Cantidad:"/>
+        <TextField fx:id="txtCantidad" layoutX="120" layoutY="60"/>
+
+        <Label layoutX="20" layoutY="100" text="Precio:"/>
+        <TextField fx:id="txtPrecio" layoutX="120" layoutY="100"/>
+
+        <Button text="Guardar" layoutX="50" layoutY="160" onAction="#guardarProducto"/>
+        <Button text="Eliminar" layoutX="150" layoutY="160" onAction="#eliminarProducto"/>
+        <Button text="Actualizar" layoutX="250" layoutY="160" onAction="#actualizarProducto"/>
+
+        <TableView fx:id="tablaProductos" layoutX="20" layoutY="200" prefWidth="440" prefHeight="180">
+            <columns>
+                <TableColumn fx:id="colProducto" text="Producto" prefWidth="150"/>
+                <TableColumn fx:id="colCantidad" text="Cantidad" prefWidth="100"/>
+                <TableColumn fx:id="colPrecio" text="Precio" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

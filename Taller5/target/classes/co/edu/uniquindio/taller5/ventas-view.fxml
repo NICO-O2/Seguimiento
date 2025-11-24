@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.taller5.ViewController.VentaController"
+            prefHeight="400.0" prefWidth="480.0">
+
+    <children>
+        <Label layoutX="20" layoutY="20" text="Fecha:"/>
+        <Label fx:id="lblFecha" layoutX="120" layoutY="20"/>
+
+        <Label layoutX="20" layoutY="60" text="Cliente:"/>
+        <ChoiceBox fx:id="choiceCliente" layoutX="120" layoutY="60"/>
+
+        <Label layoutX="20" layoutY="100" text="Producto:"/>
+        <ChoiceBox fx:id="choiceProducto" layoutX="120" layoutY="100"/>
+
+        <Label layoutX="20" layoutY="140" text="Cantidad:"/>
+        <TextField fx:id="txtCantidadVenta" layoutX="120" layoutY="140"/>
+
+        <Button text="Guardar Venta" layoutX="120" layoutY="180" onAction="#guardarVenta"/>
+
+        <TableView fx:id="tablaVentas" layoutX="20" layoutY="220" prefWidth="440" prefHeight="160">
+            <columns>
+                <TableColumn fx:id="colFecha" text="Fecha" prefWidth="100"/>
+                <TableColumn fx:id="colCliente" text="Cliente" prefWidth="100"/>
+                <TableColumn fx:id="colProducto" text="Producto" prefWidth="100"/>
+                <TableColumn fx:id="colCantidad" text="Cantidad" prefWidth="80"/>
+                <TableColumn fx:id="colPrecioUnitario" text="Precio Unitario" prefWidth="80"/>
+                <TableColumn fx:id="colTotal" text="Total" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

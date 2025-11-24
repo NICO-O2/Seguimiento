@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.taller5.ViewController.ClienteController"
+            prefHeight="400.0" prefWidth="480.0">
+
+    <children>
+        <Label layoutX="20" layoutY="20" text="Documento:"/>
+        <TextField fx:id="txtDocumento" layoutX="120" layoutY="20"/>
+
+        <Label layoutX="20" layoutY="60" text="Nombre:"/>
+        <TextField fx:id="txtNombre" layoutX="120" layoutY="60"/>
+
+        <Label layoutX="20" layoutY="100" text="Teléfono:"/>
+        <TextField fx:id="txtTelefono" layoutX="120" layoutY="100"/>
+
+        <Label layoutX="20" layoutY="140" text="Email:"/>
+        <TextField fx:id="txtEmail" layoutX="120" layoutY="140"/>
+
+        <Button text="Guardar" layoutX="50" layoutY="200" onAction="#guardarCliente"/>
+        <Button text="Eliminar" layoutX="150" layoutY="200" onAction="#eliminarCliente"/>
+        <Button text="Actualizar" layoutX="250" layoutY="200" onAction="#actualizarCliente"/>
+
+        <TableView fx:id="tablaClientes" layoutX="20" layoutY="250" prefWidth="440" prefHeight="130">
+            <columns>
+                <TableColumn fx:id="colDocumento" text="Documento" prefWidth="100"/>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="120"/>
+                <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="100"/>
+                <TableColumn fx:id="colEmail" text="Email" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
