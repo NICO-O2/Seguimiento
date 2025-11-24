@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.taller2.HelloController">
+
+    <children>
+        <Label layoutX="20" layoutY="20" text="Nombre:"/>
+        <TextField fx:id="txtNombre" layoutX="100" layoutY="20" prefWidth="200"/>
+
+        <Label layoutX="20" layoutY="60" text="Sexo:"/>
+        <TextField fx:id="txtSexo" layoutX="100" layoutY="60" prefWidth="200"/>
+
+        <Label layoutX="20" layoutY="100" text="Ciudad:"/>
+        <TextField fx:id="txtCiudad" layoutX="100" layoutY="100" prefWidth="200"/>
+
+        <Button fx:id="btnGuardar" layoutX="320.0" layoutY="20.0" text="Guardar" onAction="#guardarPersona"/>
+        <Button fx:id="btnVerDatos" layoutX="320.0" layoutY="60.0" text="Ver datos" onAction="#verDatos"/>
+
+        <TableView fx:id="tablaPersonas" layoutX="20" layoutY="160" prefWidth="560" prefHeight="220">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="180"/>
+                <TableColumn fx:id="colSexo" text="Sexo" prefWidth="180"/>
+                <TableColumn fx:id="colCiudad" text="Ciudad" prefWidth="180"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
